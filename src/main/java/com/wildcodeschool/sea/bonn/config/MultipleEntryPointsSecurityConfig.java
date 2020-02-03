@@ -21,7 +21,7 @@ public class MultipleEntryPointsSecurityConfig extends WebSecurityConfigurerAdap
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-          .withUser("steveguy").password(passwordEncoder().encode("steveguy")).roles("SHIELDheroes")
+          .withUser("steveguy").password(passwordEncoder().encode("steveguy")).roles("Civilist")
           .and()
           .withUser("tonystark").password(passwordEncoder().encode("tonystark")).roles("SHIELDheroes")
           .and()
