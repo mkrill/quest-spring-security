@@ -32,6 +32,7 @@ public class MultipleEntryPointsSecurityConfig extends WebSecurityConfigurerAdap
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 		.authorizeRequests()
+		.antMatchers("/").permitAll()
 		.antMatchers("/secret-bases").hasRole("SHIELDdirectors")
 		.antMatchers("/avengers/assemble").hasAnyRole("SHIELDheroes")
 		.anyRequest().authenticated()

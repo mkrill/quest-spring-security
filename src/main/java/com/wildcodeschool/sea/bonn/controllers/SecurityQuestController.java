@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SecurityQuestController {
 
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to the SHIELD";
+    }
     @GetMapping("/avengers/assemble")
     public String hello() {
         return "Avengers..... Assemble";
